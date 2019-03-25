@@ -16,5 +16,8 @@ public class User {
     private String password;
 
     @Column
+    private boolean active;
+
+    @Column
     private String role;
 }

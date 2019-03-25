@@ -22,15 +22,6 @@ public class DemoController {
         return "views/index.html";
     }
 
-    @RequestMapping("/buttons")
-    public String buttons() {
-        return "views/buttons.html";
-    }
-
-    @RequestMapping("/results")
-    public String results() {
-        return "views/results.html";
-    }
 
     @GetMapping("/login")
     public String login() {
@@ -48,6 +39,7 @@ public class DemoController {
             User user = new User();
             user.setUsername(username);
             user.setPassword(passwordEncoder.encode(password));
+            user.setActive(true);
             userRepository.save(user);
         }
         return "redirect:/login";
