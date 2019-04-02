@@ -27,11 +27,16 @@ public class DemoController {
     public String login() {
         return "views/login.html";
     }
+
     @GetMapping("/login_container")
     public String login_container() {
         return "views/login_container.html";
     }
 
+    @GetMapping("/profile")
+    public String profile() {
+    return "views/profile.html";
+    }
 
     @GetMapping("/register")
     public String register() {

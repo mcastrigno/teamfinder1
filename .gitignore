@@ -6,5 +6,7 @@ target/*
 gs-mysql-data.iml
 
 lombok.jar
+.classpath
+.project
 
 *.class
