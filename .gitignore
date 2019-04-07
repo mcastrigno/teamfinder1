@@ -10,3 +10,4 @@ lombok.jar
 .project
 
 *.class
+/bin/
