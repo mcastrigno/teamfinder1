@@ -38,6 +38,11 @@ public class DemoController {
     return "views/profile.html";
     }
 
+    @GetMapping("/group")
+    public String group() {
+        return "views/group.html";
+    }
+
     @GetMapping("/register")
     public String register() {
         return "views/register.html";
