@@ -8,48 +8,90 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/app_specific.css"/>
     <link rel="stylesheet" type="text/css" href="css/app_specific.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"> </script>
     <script type="text/javascript" src="js/avail.js"> </script>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4"></div>
+            <div class="col-sm-4"></div>
+            <div class="col-12">
                 <div class="row">
-                   <div class="col-4">my face here</div>
-                      <div class="col-8">
+                    <div class="col-3">
                         <div class="row">
-                            <div class="col-8">my name here</div>
+                            <div class="col-12"><img src="personal_lcon.png" class="img-fluid img-circle" alt="Responsive image"></div>
                         </div>
                         <div class="row">
-                            <div class="col-8">my profile info here</div>
+                            <div class="col-12">
+                                <div><button type="button" class="btn btn-primary btn-sma btn-block">Edit</button></div>
+                            </div>
                         </div>
-                      </div>
+                        <div class="row">
+                                    <div class="col-12">
+                                        <div><button type="button" class="btn btn-primary btn-sm btn-block">Messages</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-12">Student Name</div>
+                        </div>
+                        <div class="row">
+                            <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                            <div class="col-12">Student provided profile information. Suggested information: technology knowledge, tool preference, etc.
+                                                Other information such as the best way to contact.</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        <div class="row">
-                <div class="col-12 col-sm-4">
-
-
-                  <table class="table tableHeader">
-                      <tr>
-                          <td class="dCell">Time</td>
-                          <td class="aCell">Sun</td>
-                          <td class="aCell">Mon</td>
-                          <td class="aCell">Tues</td>
-                          <td class="aCell">Wed</td>
-                          <td class="aCell">Thurs</td>
-                          <td class="aCell">Fri</td>
-                          <td class="aCell">Sat</td>
-                      </tr>
-                      </table>
-                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                      <script> writeAvailTable();</script>
-
-              </div>
+            <div class="col-12">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-8">
+                            <div>
+                            My Availablity
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div>
+                            <button type="button" class="btn btn-info btn-block btn-sm" data-toggle="collapse" data-target="#more">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="more" >
+                <div  class="card-body">
+                    <div class="card-text text-sm-left">
+                    Weekly Availabity calendar - Tap a Day/Time to show you are generally available. These times will be used to
+                    help you find team members with availability that best lines up with yours. Swipe up or down to scroll the time.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12">
+                <table class="table tableHeader">
+                    <tr>
+                        <td class="dCell">Time</td>
+                        <td class="aCell">Sun</td>
+                        <td class="aCell">Mon</td>
+                        <td class="aCell">Tues</td>
+                        <td class="aCell">Wed</td>
+                        <td class="aCell">Thurs</td>
+                        <td class="aCell">Fri</td>
+                        <td class="aCell">Sat</td>
+                    </tr>
+                </table>
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <script> writeAvailTable();</script>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
             </div>
         </div>
-     </div>
+    </div>
 </body>
 </html>
