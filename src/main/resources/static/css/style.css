@@ -7,11 +7,6 @@
     border-color: #000000;
 }
 
-.btn {
-    background-color: white;
-    border-color: #000000;
-}
-
 .display-none {
     display: none;
 }
@@ -43,4 +38,8 @@ h3 {
 
 #welcome-user {
     margin-bottom: 20px;
+}
+
+.row {
+    margin: 10px;
 }
