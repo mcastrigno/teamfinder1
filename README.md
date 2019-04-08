@@ -1,5 +1,5 @@
-# CounselorTime
-School Counselor Time Auditing Tool
+# Team Finder
+Team Finder prototype
 
 ## Compiling and Running
 Make sure you have Maven and Java 8 installed.
