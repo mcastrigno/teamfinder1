@@ -1,5 +1,3 @@
-
-
 .btn-tall {
     min-height: 200px;
     margin: 15px;
@@ -42,4 +40,12 @@ h3 {
 
 .row {
     margin: 10px;
+}
+
+.green {
+    background-color: #1e7e34;
+}
+
+.red {
+    background-color: #b21f2d;
 }

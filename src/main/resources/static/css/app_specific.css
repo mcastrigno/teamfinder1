@@ -1,6 +1,5 @@
 .my-custom-scrollbar {
     position: relative;
-    height: 140px;
     overflow: auto;
 }
 .table-wrapper-scroll-y {

@@ -13,14 +13,14 @@
 </head>
 <body onload="getUserInfo()">
     <div class="row justify-content-center text-center">
-        <h1>Groups</h1>
+        <h1>Group Schedules</h1>
     </div>
     <div class="row justify-content-center text-center">
         <h2 id="welcome-user"></h2>
     </div>
     <div class="row justify-content-center text-center">
         <!-- get groups user is in, and add them in here-->
-        <select>
+        <select id="group-select" onchange="switchTable()">
             <option value="group1">Group 1</option>
             <option value="group2">Group 2</option>
             <option value="group3">Group 3</option>
@@ -42,13 +42,18 @@
                     <td class="aCell">Sat</td>
                 </tr>
             </table>
-            <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                <script> writeAvailTable();</script>
+            <div id="group1" class="my-custom-scrollbar">
+                <script> writeAvailTable(1);</script>
+            </div>
+            <div id="group2" class="my-custom-scrollbar display-none">
+                <script> writeAvailTable(2);</script>
+            </div>
+            <div id="group3" class="my-custom-scrollbar display-none">
+                <script> writeAvailTable(3);</script>
             </div>
         </div>
     </div>
-        <!-- not sure why these are off-set from top stuff by so much. -->
-        <!--<div class="col-12 col-lg-6"><!-- should be on bottom, away from other stuff -->
+    <!-- should be on bottom, away from other stuff -->
     <div class="row justify-content-center text-center">
         <div class="col-12 col-lg-6">
                 <a href="/profile" class="btn btn-primary btn-sm">Profile </a>
