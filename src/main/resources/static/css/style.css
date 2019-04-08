@@ -9,7 +9,6 @@
 
 .btn {
     background-color: white;
-    color: #22377C;
     border-color: #000000;
 }
 
@@ -40,4 +39,8 @@ h3 {
 
 .hidden {
     visibility: hidden;
+}
+
+#welcome-user {
+    margin-bottom: 20px;
 }

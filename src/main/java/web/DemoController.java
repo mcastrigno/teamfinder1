@@ -22,13 +22,7 @@ public class DemoController {
         return "views/index.html";
     }
 
-
     @GetMapping("/login")
-    public String login() {
-        return "views/login.html";
-    }
-
-    @GetMapping("/login_container")
     public String login_container() {
         return "views/login_container.html";
     }
