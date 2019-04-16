@@ -28,31 +28,12 @@
     </div>
 
     <div class="row justify-content-center text-center">
-        <div class="col-12 col-sm-4">
             <!-- show matched table here, should show results of button above-->
-            <table class="table tableHeader">
-                <tr>
-                    <td class="dCell">Time</td>
-                    <td class="aCell">Sun</td>
-                    <td class="aCell">Mon</td>
-                    <td class="aCell">Tues</td>
-                    <td class="aCell">Wed</td>
-                    <td class="aCell">Thurs</td>
-                    <td class="aCell">Fri</td>
-                    <td class="aCell">Sat</td>
-                </tr>
-            </table>
-            <div id="group1" class="my-custom-scrollbar">
-                <script> writeAvailTable(1);</script>
-            </div>
-            <div id="group2" class="my-custom-scrollbar display-none">
-                <script> writeAvailTable(2);</script>
-            </div>
-            <div id="group3" class="my-custom-scrollbar display-none">
-                <script> writeAvailTable(3);</script>
-            </div>
-        </div>
+            <table id="group1" class="table table-bordered"></table>
+            <table id="group2" class="table table-bordered display-none"></table>
+            <table id="group3" class="table table-bordered display-none"></table>
     </div>
+    <script>makeTables();</script>
     <!-- should be on bottom, away from other stuff -->
     <div class="row justify-content-center text-center">
         <div class="col-12 col-lg-6">
