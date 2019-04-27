@@ -26,9 +26,11 @@ const buildTable = function() {
             if (c == 0) {
                 let time = r+8;
                 if (time == 12) {
-                    time = "Noon"
+                    time = "12-1"
+                } else if(time > 12) {
+                    time = (time%12) + "-" + ((time+1)%12);
                 } else {
-                    time = time > 12 ? (time%12) + "pm": time + "am";
+                    time = time + "-" + (time+1);
                 }
                 td.innerText = time;
                 td.classList.add("dCell");

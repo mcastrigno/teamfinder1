@@ -18,16 +18,8 @@
     <div class="row justify-content-center text-center">
         <h2 id="welcome-user"></h2>
     </div>
-    <div class="row justify-content-center text-center">
-        <!-- get groups user is in, and add them in here-->
-        <select id="group-select" onchange="switchTable()">
-            <option value="group1">Group 1</option>
-            <option value="group2">Group 2</option>
-            <option value="group3">Group 3</option>
-        </select>
-    </div>
 
-    <div class="row justify-content-center text-center">
+    <div id="table-container" class="row justify-content-center text-center">
             <!-- show matched table here, should show results of button above-->
             <table id="group1" class="table table-bordered"></table>
             <table id="group2" class="table table-bordered display-none"></table>

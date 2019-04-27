@@ -9,14 +9,19 @@ const getUserInfo = function() {
 };
 
 const makeTables = function() {
-    let groups = ["group1","group2","group3"];
+    let container = document.getElementById("table-container");
+    let groups = ["Group1","Group2","Group3"];
     let headers = ["Time","Sun","Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
     let table;
     let td;
     let row;
+    let h3;
 
     groups.forEach(function(group) {
-        table = document.getElementById(group);
+        h3 = document.createElement('h3');
+        h3.innerText = group;
+        table = document.createElement('table');
+        table.classList.add("table", "table-bordered");
         let th = document.createElement("tr");
         for(let i = 0; i < 8; i++) {
             td = document.createElement("td");
@@ -38,20 +43,22 @@ const makeTables = function() {
                 if (c == 0) {
                     let time = r+8;
                     if (time == 12) {
-                        time = "Noon"
+                        time = "12-1"
+                    } else if(time > 12) {
+                        time = (time%12) + "-" + ((time+1)%12);
                     } else {
-                        time = time > 12 ? (time%12) + "pm": time + "am";
+                        time = time + "-" + (time+1);
                     }
                     td.innerText = time;
                     td.classList.add("dCell");
                 } else {
                     let id = (r*8)+c;
                     let color;
-                    if (group=='group1') {
+                    if (group=='Group1') {
                         color = (c%2) && (r>1 && r<4) ? "green": "red";
-                    } else if (group=='group2') {
+                    } else if (group=='Group2') {
                         color = ((c%2==0) && (r%4<2)) ? "green": "red";
-                    } else if (group=='group3') {
+                    } else if (group=='Group3') {
                         color = "red";
                     }
                     td.classList.add("aCell",color);
@@ -61,19 +68,7 @@ const makeTables = function() {
             }
             table.appendChild(row);
         }
-    })
-};
-
-const switchTable = function() {
-    let show = document.getElementById("group-select").value;
-    let groups = ["group1","group2","group3"];
-    let table;
-    groups.forEach(function(group) {
-        table = document.getElementById(group);
-        if (group == show) {
-            table.style.display = "block";
-        } else {
-            table.style.display = "none";
-        }
+        container.appendChild(h3);
+        container.appendChild(table);
     })
 };
