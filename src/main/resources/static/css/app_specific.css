@@ -11,6 +11,12 @@
 .dCell {
     width:16% !important;
 }
+.available{
+    background-color: #2E8B57 !important;
+}
+.notAvailable{
+    background-color: #b9bbbe !important;
+}
 .tableHeader{
     margin:0 !important;
 }

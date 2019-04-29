@@ -55,11 +55,11 @@ const makeTables = function() {
                     let id = (r*8)+c;
                     let color;
                     if (group=='Group1') {
-                        color = (c%2) && (r>1 && r<4) ? "green": "red";
+                        color = (c%2) && (r>1 && r<4) ? "available": "notAvailable";
                     } else if (group=='Group2') {
-                        color = ((c%2==0) && (r%4<2)) ? "green": "red";
+                        color = ((c%2==0) && (r%4<2)) ? "available": "notAvailable";
                     } else if (group=='Group3') {
-                        color = "red";
+                        color = "notAvailable";
                     }
                     td.classList.add("aCell",color);
                     td.id = id;

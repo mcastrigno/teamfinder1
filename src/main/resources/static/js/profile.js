@@ -36,7 +36,7 @@ const buildTable = function() {
                 td.classList.add("dCell");
             } else {
                 let id = (r*8)+c;
-                let color = ((c%2==0) && (r%4<2)) || ((c%2) && (r>1 && r<5)) ? "green": "red";
+                let color = ((c%2==0) && (r%4<2)) || ((c%2) && (r>1 && r<5)) ? "available": "notAvailable";
                 td.classList.add("aCell",color);
                 td.id = id;
                 td.onclick = function() {toggleColor(id);}
@@ -49,9 +49,9 @@ const buildTable = function() {
 
 const toggleColor = function(id) {
     let td = document.getElementById(id);
-    if (td.classList.contains("green")) {
-        td.classList.replace("green", "red");
+    if (td.classList.contains("available")) {
+        td.classList.replace("available", "notAvailable");
     } else {
-        td.classList.replace("red", "green");
+        td.classList.replace("notAvailable", "available");
     }
 };
